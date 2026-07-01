@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineering Knowledge Copilot</title>
+
+    <link rel="stylesheet" href="App.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-brain"></i>
+        <h2>Engineering Knowledge Copilot</h2>
+    </div>
+
+    <div class="status">
+        <span class="dot"></span>
+        Backend Ready
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<h1>Engineering AI Assistant</h1>
+
+<p>
+Upload engineering PDFs and ask intelligent questions using AI.
+</p>
+
+</section>
+
+
+
+<section class="upload-card">
+
+<h2>
+<i class="fa-solid fa-file-pdf"></i>
+Upload Engineering Document
+</h2>
+
+<form id="uploadForm">
+
+<div class="upload-box">
+
+<input
+type="file"
+id="pdfFile"
+accept=".pdf"
+required>
+
+</div>
+
+<button type="submit">
+
+<i class="fa-solid fa-upload"></i>
+
+Upload PDF
+
+</button>
+
+</form>
+
+<div id="uploadStatus"></div>
+
+</section>
+
+
+
+
+<section class="chat-card">
+
+<h2>
+
+<i class="fa-solid fa-comments"></i>
+
+Ask AI
+
+</h2>
+
+<textarea
+id="question"
+placeholder="Example: Explain Normalization in DBMS">
+</textarea>
+
+<button id="askBtn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Ask Question
+
+</button>
+
+</section>
+
+
+
+
+<section class="answer-card">
+
+<h2>
+
+<i class="fa-solid fa-robot"></i>
+
+AI Response
+
+</h2>
+
+<div id="response">
+
+Waiting for your question...
+
+</div>
+
+</section>
+
+
+
+
+<section class="features">
+
+<div class="feature">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<h3>Semantic Search</h3>
+
+<p>Find relevant engineering concepts instantly.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-book-open"></i>
+
+<h3>Summarization</h3>
+
+<p>Create concise study notes from PDFs.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Quiz Generator</h3>
+
+<p>Generate practice questions automatically.</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+Developed using FastAPI • LangChain • FAISS • PostgreSQL • RAG
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
