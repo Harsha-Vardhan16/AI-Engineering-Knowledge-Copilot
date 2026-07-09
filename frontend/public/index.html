@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Engineering Knowledge Copilot</title>
+
+    <title>Engineering Knowledge Copilot</title>
 
     <link rel="stylesheet" href="App.css">
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -35,147 +36,151 @@
 
 <main>
 
-<section class="hero">
+    <!-- Hero -->
 
-<h1>Engineering AI Assistant</h1>
+    <section class="hero">
 
-<p>
-Upload engineering PDFs and ask intelligent questions using AI.
-</p>
+        <h1>Engineering AI Assistant</h1>
 
-</section>
+        <p>
+            Upload engineering PDFs and ask intelligent questions using AI.
+        </p>
 
+    </section>
 
 
-<section class="upload-card">
+    <!-- Upload -->
 
-<h2>
-<i class="fa-solid fa-file-pdf"></i>
-Upload Engineering Document
-</h2>
+    <section class="upload-card">
 
-<form id="uploadForm">
+        <h2>
+            <i class="fa-solid fa-file-pdf"></i>
+            Upload Engineering Document
+        </h2>
 
-<div class="upload-box">
+        <form id="uploadForm">
 
-<input
-type="file"
-id="pdfFile"
-accept=".pdf"
-required>
+            <div class="upload-box">
 
-</div>
+                <input
+                    type="file"
+                    id="pdfFile"
+                    accept=".pdf"
+                    required>
 
-<button type="submit">
+            </div>
 
-<i class="fa-solid fa-upload"></i>
+            <button type="submit">
 
-Upload PDF
+                <i class="fa-solid fa-upload"></i>
 
-</button>
+                Upload PDF
 
-</form>
+            </button>
 
-<div id="uploadStatus"></div>
+        </form>
 
-</section>
+        <div id="uploadStatus"></div>
 
+    </section>
 
 
+    <!-- Ask AI -->
 
-<section class="chat-card">
+    <section class="chat-card">
 
-<h2>
+        <h2>
 
-<i class="fa-solid fa-comments"></i>
+            <i class="fa-solid fa-comments"></i>
 
-Ask AI
+            Ask AI
 
-</h2>
+        </h2>
 
-<textarea
-id="question"
-placeholder="Example: Explain Normalization in DBMS">
-</textarea>
+        <textarea
+            id="question"
+            placeholder="Example: Explain Normalization in DBMS">
+        </textarea>
 
-<button id="askBtn">
+        <button id="askBtn">
 
-<i class="fa-solid fa-paper-plane"></i>
+            <i class="fa-solid fa-paper-plane"></i>
 
-Ask Question
+            Ask Question
 
-</button>
+        </button>
 
-</section>
+    </section>
 
 
+    <!-- AI Response -->
 
+    <section class="answer-card">
 
-<section class="answer-card">
+        <h2>
 
-<h2>
+            <i class="fa-solid fa-robot"></i>
 
-<i class="fa-solid fa-robot"></i>
+            AI Response
 
-AI Response
+        </h2>
 
-</h2>
+        <div id="response">
 
-<div id="response">
+            Waiting for your question...
 
-Waiting for your question...
+        </div>
 
-</div>
+    </section>
 
-</section>
 
+    <!-- Features -->
 
+    <section class="features">
 
+        <div class="feature">
 
-<section class="features">
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-<div class="feature">
+            <h3>Semantic Search</h3>
 
-<i class="fa-solid fa-magnifying-glass"></i>
+            <p>Find relevant engineering concepts instantly.</p>
 
-<h3>Semantic Search</h3>
+        </div>
 
-<p>Find relevant engineering concepts instantly.</p>
+        <div class="feature">
 
-</div>
+            <i class="fa-solid fa-book-open"></i>
 
-<div class="feature">
+            <h3>Summarization</h3>
 
-<i class="fa-solid fa-book-open"></i>
+            <p>Create concise study notes from PDFs.</p>
 
-<h3>Summarization</h3>
+        </div>
 
-<p>Create concise study notes from PDFs.</p>
+        <div class="feature">
 
-</div>
+            <i class="fa-solid fa-graduation-cap"></i>
 
-<div class="feature">
+            <h3>Quiz Generator</h3>
 
-<i class="fa-solid fa-graduation-cap"></i>
+            <p>Generate practice questions automatically.</p>
 
-<h3>Quiz Generator</h3>
+        </div>
 
-<p>Generate practice questions automatically.</p>
-
-</div>
-
-</section>
+    </section>
 
 </main>
 
 
 <footer>
 
-Developed using FastAPI • LangChain • FAISS • PostgreSQL • RAG
+    Developed using FastAPI • LangChain • FAISS • PostgreSQL • RAG
 
 </footer>
 
-<script src="script.js"></script>
+<script src="App.js"></script>
 
 </body>
+
 </html>

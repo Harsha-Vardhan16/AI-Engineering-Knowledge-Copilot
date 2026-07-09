@@ -1,13 +1,13 @@
 from fastapi import APIRouter
-from services.embedding_service import create_embeddings
-from vector_store.faiss_store import search
-from database.chunk_store import load_chunks
 
 router = APIRouter()
 
-
 @router.get("/search")
 def search_pdf(question: str):
+
+    from services.embedding_service import create_embeddings
+    from vector_store.faiss_store import search
+    from database.chunk_store import load_chunks
 
     query_embedding = create_embeddings([question])
 

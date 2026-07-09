@@ -1,7 +1,8 @@
 import pickle
 import os
 
-CHUNK_FILE = "database/chunks.pkl"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CHUNK_FILE = os.path.join(BASE_DIR, "database", "chunks.pkl")
 
 
 def save_chunks(chunks):
