@@ -4,24 +4,28 @@ from fastapi.middleware.cors import CORSMiddleware
 from api.upload import router as upload_router
 from api.search import router as search_router
 
+
+# ============================
+# Create FastAPI App
+# ============================
+
 app = FastAPI(
     title="AI Engineering Knowledge Copilot"
 )
 
+
 # ============================
-# Enable CORS
+# CORS
 # ============================
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5500",
-        "http://localhost:5500"
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ============================
 # Routers
@@ -29,6 +33,7 @@ app.add_middleware(
 
 app.include_router(upload_router)
 app.include_router(search_router)
+
 
 # ============================
 # Home
