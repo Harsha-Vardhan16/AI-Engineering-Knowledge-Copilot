@@ -62,9 +62,7 @@ def search_pdf(question: str):
     # Step 6: Connect Gemini
     # ===============================
 
-    client = genai.Client(
-        api_key=os.environ.get("GEMINI_API_KEY")
-    )
+    client = genai.Client()
 
 
     # ===============================
