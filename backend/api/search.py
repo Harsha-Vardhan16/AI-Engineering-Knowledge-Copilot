@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+import os
 
 router = APIRouter()
 
@@ -14,8 +15,7 @@ def search_pdf(question: str):
     from vector_store.faiss_store import search
     from database.chunk_store import load_chunks
 
-    # Llama through Ollama
-    from langchain_ollama import ChatOllama
+    from google import genai
 
 
     # ===============================
@@ -48,7 +48,6 @@ def search_pdf(question: str):
     for i in indices[0]:
 
         if i < len(chunks):
-
             results.append(chunks[i])
 
 
@@ -60,12 +59,11 @@ def search_pdf(question: str):
 
 
     # ===============================
-    # Step 6: Connect Llama 3.2
+    # Step 6: Connect Gemini
     # ===============================
 
-    llm = ChatOllama(
-        model="llama3.2:latest",
-        temperature=0
+    client = genai.Client(
+        api_key=os.environ.get("GEMINI_API_KEY")
     )
 
 
@@ -93,10 +91,13 @@ Answer:
 
 
     # ===============================
-    # Step 8: Ask Llama
+    # Step 8: Ask Gemini
     # ===============================
 
-    response = llm.invoke(prompt)
+    response = client.models.generate_content(
+        model="gemini-3.8-flash",
+        contents=prompt
+    )
 
 
     # ===============================
@@ -105,6 +106,6 @@ Answer:
 
     return {
         "question": question,
-        "answer": response.content,
+        "answer": response.text,
         "retrieved_chunks": results
     }
