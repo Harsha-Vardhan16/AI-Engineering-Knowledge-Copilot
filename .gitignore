@@ -5,4 +5,13 @@ __pycache__/
 
 backend/uploads/
 backend/database/chunks.pkl
+backend/vector_store/faiss_index.bin.env
+.env.*
+!.env.example
+backend/database/
 backend/vector_store/faiss_index.bin
+frontend/node_modules/
+frontend/dist/
+*.db
+*.sqlite
+*.sqlite3
